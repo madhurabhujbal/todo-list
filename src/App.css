@@ -1,8 +1,11 @@
 .App {
   display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
   justify-content: center;
 }
 
 .App input {
-  min-height: 35px;
+  min-height: 15px;
 }

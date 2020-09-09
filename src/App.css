@@ -5,6 +5,12 @@
   text-align: center;
 }
 
-.App input {
-  min-height: 15px;
+.item-list input {
+  min-height: 16px;
+  outline: none;
+  border: none;
+}
+
+.item-list input:focus {
+  outline: none;
 }

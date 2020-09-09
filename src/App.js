@@ -5,7 +5,14 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <input type="text" />
+        <header>
+          <h3>To-do List</h3>
+        </header>
+        <main>
+          <li>
+            <input type="text" />
+          </li>
+        </main>
       </div>
     );
   }

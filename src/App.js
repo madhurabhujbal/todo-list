@@ -9,8 +9,8 @@ export default class App extends Component {
           <h3>To-do List</h3>
         </header>
         <main>
-          <li>
-            <input type="text" />
+          <li className="item-list">
+            <input type="text" className="item" />
           </li>
         </main>
       </div>

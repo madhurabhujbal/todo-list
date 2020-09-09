@@ -1,14 +1,25 @@
+body {
+  background: rgb(209, 209, 209);
+}
 .App {
-  margin: 10px;
+  width: 500px;
+  min-height: 600px;
+  margin: 10px auto;
   padding: 10px;
   justify-content: center;
   text-align: center;
+  background: rgb(175, 174, 172);
+}
+
+li.item-list {
+  padding-left: 0px;
 }
 
 .item-list input {
   min-height: 16px;
   outline: none;
   border: none;
+  background: none;
 }
 
 .item-list input:focus {

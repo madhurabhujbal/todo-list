@@ -1,0 +1,50 @@
+.App {
+  width: 500px;
+  min-height: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  background: rgb(243, 243, 242);
+}
+
+li {
+  list-style: none;
+}
+
+li.item-list {
+  padding-left: 0px;
+}
+
+.row {
+  max-height: 21px;
+  align-items: stretch;
+}
+
+h3 {
+  padding-bottom: 15px;
+}
+
+.col-md-2 {
+  height: 21px;
+  padding-left: 0px;
+}
+
+.col-md-2 input.item {
+  margin-top: 0px;
+  height: 21px;
+  padding-top: 0px;
+  padding-left: 6px;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.col-md-2 input:focus {
+  outline: none;
+}
+
+.col-md-1 input.checkbox {
+  margin-left: 15px;
+  outline: double;
+}

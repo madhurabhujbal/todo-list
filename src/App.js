@@ -11,7 +11,11 @@ export default class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <input type="text" className="item" autoFocus />
+            <div className="container">
+              <div className="row">
+                <input type="text" className="item" autoFocus />
+              </div>
+            </div>
           </li>
         </main>
       </div>

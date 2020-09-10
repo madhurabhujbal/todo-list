@@ -13,8 +13,12 @@ export default class App extends Component {
           <li className="item-list">
             <div className="container">
               <div className="row">
-                <input type="checkbox" />
-                <input type="text" className="item" autoFocus />
+                <div className="col-md-1">
+                  <input type="checkbox" className="checkbox" />
+                </div>
+                <div className="col-md-2">
+                  <input type="text" className="item" col-sm-2 autoFocus />
+                </div>
               </div>
             </div>
           </li>

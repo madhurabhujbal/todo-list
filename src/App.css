@@ -19,13 +19,25 @@ li.item-list {
   padding-left: 0px;
 }
 
-.item-list input {
-  min-height: 16px;
+/* .row {
+  max-height: 21px;
+  align-items: stretch;
+} */
+
+.col-md-2 {
+  height: 21px;
+  padding-left: 0px;
+}
+
+.col-md-2 input.item {
+  margin-top: 0px;
+  height: 21px;
+  padding-top: 0px;
   outline: none;
   border: none;
   background: none;
 }
 
-.item-list input:focus {
+.col-md-2 input:focus {
   outline: none;
 }

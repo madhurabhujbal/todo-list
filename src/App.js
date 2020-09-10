@@ -13,6 +13,7 @@ export default class App extends Component {
           <li className="item-list">
             <div className="container">
               <div className="row">
+                <input type="checkbox" />
                 <input type="text" className="item" autoFocus />
               </div>
             </div>

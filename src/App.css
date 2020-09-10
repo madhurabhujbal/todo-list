@@ -19,10 +19,10 @@ li.item-list {
   padding-left: 0px;
 }
 
-/* .row {
+.row {
   max-height: 21px;
   align-items: stretch;
-} */
+}
 
 .col-md-2 {
   height: 21px;

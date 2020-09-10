@@ -17,7 +17,7 @@ export default class App extends Component {
                   <input type="checkbox" className="checkbox" />
                 </div>
                 <div className="col-md-2">
-                  <input type="text" className="item" col-sm-2 autoFocus />
+                  <input type="text" className="item" autoFocus />
                 </div>
               </div>
             </div>

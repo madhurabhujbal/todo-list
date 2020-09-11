@@ -5,8 +5,12 @@ import Display from "./components/Display";
 
 export default class App extends Component {
   state = {
-    input: [],
-    ticked: [],
+    list: [
+      { id: 1, value: "sugar" },
+      { id: 2, value: "tea" },
+      { id: 3, value: "milk" },
+      { id: 4, value: "honey" },
+    ],
   };
 
   // addItem = (e) => {
@@ -26,7 +30,7 @@ export default class App extends Component {
         <header>
           <h3>To-do List</h3>
         </header>
-        <Display />
+        <Display list={this.state.list} />
       </div>
     );
   }

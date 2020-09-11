@@ -3,9 +3,6 @@ import React from "react";
 function Display() {
   return (
     <div>
-      <header>
-        <h3>To-do List</h3>
-      </header>
       <main>
         <li className="item-list">
           <div className="container">

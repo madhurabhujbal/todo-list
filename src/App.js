@@ -9,9 +9,23 @@ export default class App extends Component {
     ticked: [],
   };
 
+  // addItem = (e) => {
+  //   let listItems = [...this.state.input];
+  //   if (e.key === "Enter") {
+  //     this.setState((prevState) => {
+  //       listItems = "Enter next item";
+  //       return { ...prevState, input: listItems };
+  //     });
+  //     console.log(this.state.input);
+  //   }
+  // };
+
   render() {
     return (
       <div className="App">
+        <header>
+          <h3>To-do List</h3>
+        </header>
         <Display />
       </div>
     );

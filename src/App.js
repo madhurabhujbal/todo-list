@@ -30,7 +30,11 @@ export default class App extends Component {
         <header>
           <h3>To-do List</h3>
         </header>
-        <Display list={this.state.list} />
+        <main>
+          <li className="item-list">
+            <Display list={this.state.list} />
+          </li>
+        </main>
       </div>
     );
   }

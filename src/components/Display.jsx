@@ -9,14 +9,21 @@ class Display extends Component {
         <main>
           <li className="item-list">
             <div className="container">
-              <div className="row">
-                <div className="col-md-1">
-                  <input type="checkbox" className="checkbox" />
+              {list.map((listItems) => (
+                <div className="row">
+                  <div className="col-md-1">
+                    <input type="checkbox" className="checkbox" />
+                  </div>
+                  <div className="col-md-2">
+                    <input
+                      type="text"
+                      className="item"
+                      value={list.value}
+                      autoFocus
+                    />
+                  </div>
                 </div>
-                <div className="col-md-2">
-                  <input type="text" className="item" value={list} autoFocus />
-                </div>
-              </div>
+              ))}
             </div>
           </li>
         </main>

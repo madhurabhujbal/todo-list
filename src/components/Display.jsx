@@ -10,7 +10,7 @@ class Display extends Component {
           <li className="item-list">
             <div className="container">
               {list.map((listItems) => (
-                <div className="row">
+                <div className="row" key={list.id}>
                   <div className="col-md-1">
                     <input type="checkbox" className="checkbox" />
                   </div>
@@ -18,7 +18,7 @@ class Display extends Component {
                     <input
                       type="text"
                       className="item"
-                      value={list.value}
+                      value={listItems.value}
                       autoFocus
                     />
                   </div>

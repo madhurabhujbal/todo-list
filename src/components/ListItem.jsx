@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem() {
+function ListItem({ list, listItem }) {
   return (
     <div className="row" key={list.id}>
       <div className="col-md-1">

@@ -1,8 +1,29 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Display from "./components/Display";
 
 export default class App extends Component {
+  state = {
+    list: [
+      { id: 1, value: "sugar" },
+      { id: 2, value: "tea" },
+      { id: 3, value: "milk" },
+      { id: 4, value: "honey" },
+    ],
+  };
+
+  // addItem = (e) => {
+  //   let listItems = [...this.state.input];
+  //   if (e.key === "Enter") {
+  //     this.setState((prevState) => {
+  //       listItems = "Enter next item";
+  //       return { ...prevState, input: listItems };
+  //     });
+  //     console.log(this.state.input);
+  //   }
+  // };
+
   render() {
     return (
       <div className="App">
@@ -11,16 +32,7 @@ export default class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-1">
-                  <input type="checkbox" className="checkbox" />
-                </div>
-                <div className="col-md-2">
-                  <input type="text" className="item" autoFocus />
-                </div>
-              </div>
-            </div>
+            <Display list={this.state.list} />
           </li>
         </main>
       </div>

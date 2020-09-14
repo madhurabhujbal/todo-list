@@ -4,11 +4,11 @@ import ListItem from "./ListItem";
 
 class Display extends Component {
   render() {
-    const { list } = this.props;
+    const { list, addItem } = this.props;
     return (
       <div className="container">
         {list.map((listItem) => (
-          <ListItem list={list} listItem={listItem} />
+          <ListItem list={list} listItem={listItem} addItem={addItem} />
         ))}
       </div>
     );

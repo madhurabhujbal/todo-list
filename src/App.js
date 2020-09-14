@@ -5,12 +5,7 @@ import Display from "./components/Display";
 
 export default class App extends Component {
   state = {
-    list: [
-      { id: 1, value: "sugar" },
-      { id: 2, value: "tea" },
-      { id: 3, value: "milk" },
-      { id: 4, value: "honey" },
-    ],
+    list: [{ id: 1, value: "" }],
   };
 
   // addItem = (e) => {

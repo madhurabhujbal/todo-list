@@ -8,7 +8,12 @@ class Display extends Component {
     return (
       <div className="container">
         {list.map((listItem) => (
-          <ListItem list={list} listItem={listItem} addItem={addItem} />
+          <ListItem
+            list={list}
+            key={listItem.id}
+            listItem={listItem}
+            addItem={addItem}
+          />
         ))}
       </div>
     );

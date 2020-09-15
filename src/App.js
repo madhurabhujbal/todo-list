@@ -3,26 +3,22 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Display from "./components/Display";
 
-export default class App extends Component {
+class App extends Component {
   state = {
-    list: [
-      { id: 1, value: "sugar" },
-      { id: 2, value: "tea" },
-      { id: 3, value: "milk" },
-      { id: 4, value: "honey" },
-    ],
+    list: [{ id: 1, value: "" }],
   };
 
-  // addItem = (e) => {
-  //   let listItems = [...this.state.input];
-  //   if (e.key === "Enter") {
-  //     this.setState((prevState) => {
-  //       listItems = "Enter next item";
-  //       return { ...prevState, input: listItems };
-  //     });
-  //     console.log(this.state.input);
-  //   }
-  // };
+  addItem = (e) => {
+    // const list = [...this.state.list];
+    e.preventDefault();
+    let itemName = e.target.value;
+    console.log(itemName);
+    //this.state.value = itemName;
+    this.setState((prevState) => {
+      console.log(prevState);
+      return { ...prevState, value: itemName };
+    });
+  };
 
   render() {
     return (
@@ -32,10 +28,12 @@ export default class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <Display list={this.state.list} />
+            <Display list={this.state.list} addItem={this.addItem} />
           </li>
         </main>
       </div>
     );
   }
 }
+
+export default App;

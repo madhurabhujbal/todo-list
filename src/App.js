@@ -10,9 +10,12 @@ class App extends Component {
 
   addItem = (e) => {
     // const list = [...this.state.list];
+    e.preventDefault();
     let itemName = e.target.value;
     console.log(itemName);
+    //this.state.value = itemName;
     this.setState((prevState) => {
+      console.log(prevState);
       return { ...prevState, value: itemName };
     });
   };

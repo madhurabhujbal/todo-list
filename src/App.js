@@ -8,7 +8,7 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  addNewItem = () => {
+  addNewItem = (e) => {
     let item = { id: 11, value: "new item" };
     const list = [...this.state.list, item];
     this.setState({ list });
@@ -26,7 +26,7 @@ class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <Display list={this.state.list} addItem={this.addItem} />
+            <Display list={this.state.list} addNewItem={this.addNewItem} />
           </li>
           <input type="button" onClick={this.addNewItem} value="Add new Item" />
           <br />

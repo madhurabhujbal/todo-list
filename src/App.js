@@ -8,18 +8,6 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  addItem = (e) => {
-    // let itemName = e.target.value;
-    // console.log(id);
-    // this.state.list[id].value = itemName;
-    // const newList = [...this.state.list, { id, value: itemName }];
-    //this.state.value = itemName;
-    // this.setState((prevState) => {
-    //   console.log(prevState);
-    //   return { ...prevState, value: itemName };
-    // });
-  };
-
   addNewItem = () => {
     let item = { id: 11, value: "new item" };
     const list = [...this.state.list, item];

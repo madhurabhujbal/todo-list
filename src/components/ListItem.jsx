@@ -10,7 +10,7 @@ function ListItem({ list, listItem, addItem }) {
         <input
           type="text"
           className="item"
-          onChange={addItem}
+          onChange={addItem(listItem.id)}
           value={listItem.value}
           autoFocus
         />

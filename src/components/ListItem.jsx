@@ -11,7 +11,7 @@ function ListItem({ listItem, addNewItem }) {
           type="text"
           className="item"
           onChange={addNewItem}
-          value={listItem.value}
+          defaultValue={listItem.value}
           autoFocus
         />
       </div>

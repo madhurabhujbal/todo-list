@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem({ list, listItem, addItem }) {
+function ListItem({ list, listItem, addNewItem }) {
   return (
     <div className="row" key={list.id}>
       <div className="col-md-1">
@@ -10,7 +10,7 @@ function ListItem({ list, listItem, addItem }) {
         <input
           type="text"
           className="item"
-          onChange={addItem(listItem.id)}
+          onChange={addNewItem}
           value={listItem.value}
           autoFocus
         />

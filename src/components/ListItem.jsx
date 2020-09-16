@@ -1,8 +1,8 @@
 import React from "react";
 
-function ListItem({ list, listItem, addNewItem }) {
+function ListItem({ listItem, addNewItem }) {
   return (
-    <div className="row" key={list.id}>
+    <div className="row" key={listItem.id}>
       <div className="col-md-1">
         <input type="checkbox" className="checkbox" />
       </div>

@@ -10,8 +10,8 @@ function ListItem({ listItem, addNewItem, updateItem }) {
         <input
           type="text"
           className="item"
-          // onChange={addNewItem}
           defaultValue={listItem.value}
+          onKeyPress={() => updateItem(listItem.id)}
           autoFocus
         />
       </div>

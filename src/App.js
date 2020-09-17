@@ -12,14 +12,22 @@ class App extends Component {
     let item = { id: 2, value: "new item" };
     const list = [...this.state.list, item];
     this.setState({ list });
-    console.log(list);
   };
 
-  updateItem = () => {
+  updateItem = (id) => {
     //change id'th item in the list with the newValue.
+    console.log("Key pressed on id:" + id);
     let list = this.state.list;
-    list[0].value = "updated item";
+    let position = -1;
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].id === id) {
+        position = i;
+        break;
+      }
+    }
+    list[position].value = "updated item";
     this.setState({ list: this.state.list });
+    // console.log(list);
   };
 
   render() {

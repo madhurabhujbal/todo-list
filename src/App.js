@@ -12,12 +12,14 @@ class App extends Component {
     let item = { id: 2, value: "new item" };
     const list = [...this.state.list, item];
     this.setState({ list });
-    //console.log(list);
+    console.log(list);
   };
 
   updateItem = () => {
     //change id'th item in the list with the newValue.
-    console.log("into update method");
+    let list = this.state.list;
+    list[0].value = "updated item";
+    this.setState({ list: this.state.list });
   };
 
   render() {

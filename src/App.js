@@ -8,15 +8,17 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  addNewItem = (e) => {
-    let item = { id: 11, value: "new item" };
+  addNewItem = () => {
+    let item = { id: 2, value: "new item" };
     const list = [...this.state.list, item];
     this.setState({ list });
+    //console.log(list);
   };
 
-  // updateItem(id, newValue) {
-  //   //change id'th item in the list with the newValue.
-  // }
+  updateItem = () => {
+    //change id'th item in the list with the newValue.
+    console.log("into update method");
+  };
 
   render() {
     return (
@@ -26,15 +28,19 @@ class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <Display list={this.state.list} addNewItem={this.addNewItem} />
+            <Display
+              list={this.state.list}
+              addNewItem={this.addNewItem}
+              updateItem={this.updateItem}
+            />
           </li>
           <input type="button" onClick={this.addNewItem} value="Add new Item" />
           <br />
-          {/* <input
+          <input
             type="button"
-            onClick={this.updateItem(1, "new value for the item")}
+            onClick={this.updateItem}
             value="Update existing Item"
-          /> */}
+          />
         </main>
       </div>
     );

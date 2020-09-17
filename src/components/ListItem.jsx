@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem({ listItem, addNewItem }) {
+function ListItem({ listItem, addNewItem, updateItem }) {
   return (
     <div className="row" key={listItem.id}>
       <div className="col-md-1">
@@ -10,7 +10,7 @@ function ListItem({ listItem, addNewItem }) {
         <input
           type="text"
           className="item"
-          onChange={addNewItem}
+          // onChange={addNewItem}
           defaultValue={listItem.value}
           autoFocus
         />

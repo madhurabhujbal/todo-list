@@ -8,9 +8,19 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
+  // handleEvent = (e) => {
+  //   if (e.key === "Enter") {
+  //     return console.log("key pressed is enter");
+  //   }
+  //   return console.log("Key pressed is not enter");
+  // };
+
   addNewItem = () => {
-    let item = { id: 2, value: "new item" };
-    const list = [...this.state.list, item];
+    let list = [...this.state.list];
+    let incId = list[0].id + 1;
+    console.log("increased id: " + incId);
+    let item = { id: incId, value: "new item" };
+    list = [...this.state.list, item];
     this.setState({ list });
   };
 
@@ -27,9 +37,10 @@ class App extends Component {
     }
     console.log("position: " + position);
     list[position].value = "updated item";
-    list = JSON.stringify(list);
-    console.log("json list: " + list);
+    // list = JSON.stringify(list);
+    // console.log("json list: " + list);
     this.setState({ list });
+    console.log(list);
   };
 
   render() {
@@ -44,6 +55,7 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
+              // handleEvent={this.handleEvent}
             />
           </li>
           <input type="button" onClick={this.addNewItem} value="Add new Item" />

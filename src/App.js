@@ -25,9 +25,11 @@ class App extends Component {
         break;
       }
     }
+    console.log("position: " + position);
     list[position].value = "updated item";
-    this.setState({ list: this.state.list });
-    // console.log(list);
+    list = JSON.stringify(list);
+    console.log("json list: " + list);
+    this.setState({ list });
   };
 
   render() {

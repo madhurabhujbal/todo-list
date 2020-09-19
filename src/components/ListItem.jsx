@@ -15,6 +15,13 @@ function ListItem({ listItem, addNewItem, updateItem }) {
           autoFocus
         />
       </div>
+      <div className="col-md-6">
+        <input
+          type="button"
+          onClick={() => addNewItem(listItem.id)}
+          value="Add new Item"
+        />
+      </div>
     </div>
   );
 }

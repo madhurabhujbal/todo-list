@@ -17,9 +17,9 @@ class App extends Component {
 
   addNewItem = (id) => {
     console.log("item id: " + id);
-    // let list = [...this.state.list];
-    // let incId = list[id - 1].id + 1;
-    // console.log("increased id: " + incId);
+    let list = [...this.state.list];
+    let incId = list[id - 1].id + 1;
+    console.log("increased id: " + incId);
     // let item = { id: incId, value: "new item" };
     // list = [...this.state.list, item];
     // this.setState({ list });

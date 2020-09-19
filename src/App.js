@@ -15,8 +15,8 @@ class App extends Component {
   //   return console.log("Key pressed is not enter");
   // };
 
-  addNewItem = () => {
-    //console.log("item id: " + id);
+  addNewItem = (id) => {
+    console.log("item id: " + id);
     // let list = [...this.state.list];
     // let incId = list[id - 1].id + 1;
     // console.log("increased id: " + incId);

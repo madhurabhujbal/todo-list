@@ -16,12 +16,13 @@ class App extends Component {
   // };
 
   addNewItem = () => {
-    let list = [...this.state.list];
-    let incId = list[0].id + 1;
-    console.log("increased id: " + incId);
-    let item = { id: incId, value: "new item" };
-    list = [...this.state.list, item];
-    this.setState({ list });
+    //console.log("item id: " + id);
+    // let list = [...this.state.list];
+    // let incId = list[id - 1].id + 1;
+    // console.log("increased id: " + incId);
+    // let item = { id: incId, value: "new item" };
+    // list = [...this.state.list, item];
+    // this.setState({ list });
   };
 
   updateItem = (id) => {
@@ -58,7 +59,7 @@ class App extends Component {
               // handleEvent={this.handleEvent}
             />
           </li>
-          <input type="button" onClick={this.addNewItem} value="Add new Item" />
+          {/* <input type="button" onClick={this.addNewItem} value="Add new Item" /> */}
           <br />
           <input
             type="button"

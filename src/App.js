@@ -20,9 +20,9 @@ class App extends Component {
     let list = [...this.state.list];
     let incId = list[id - 1].id + 1;
     console.log("increased id: " + incId);
-    // let item = { id: incId, value: "new item" };
-    // list = [...this.state.list, item];
-    // this.setState({ list });
+    let item = { id: incId, value: "new item" };
+    list = [...this.state.list, item];
+    this.setState({ list });
   };
 
   updateItem = (id) => {

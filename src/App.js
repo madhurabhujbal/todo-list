@@ -8,16 +8,40 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  addItem = (e) => {
-    // const list = [...this.state.list];
-    e.preventDefault();
-    let itemName = e.target.value;
-    console.log(itemName);
-    //this.state.value = itemName;
-    this.setState((prevState) => {
-      console.log(prevState);
-      return { ...prevState, value: itemName };
-    });
+  // handleEvent = (e) => {
+  //   if (e.key === "Enter") {
+  //     return console.log("key pressed is enter");
+  //   }
+  //   return console.log("Key pressed is not enter");
+  // };
+
+  addNewItem = (id) => {
+    console.log("item id: " + id);
+    let list = [...this.state.list];
+    let incId = list[id - 1].id + 1;
+    console.log("increased id: " + incId);
+    let item = { id: incId, value: "new item" };
+    list = [...this.state.list, item];
+    this.setState({ list });
+  };
+
+  updateItem = (id) => {
+    //change id'th item in the list with the newValue.
+    console.log("Key pressed on id:" + id);
+    let list = this.state.list;
+    let position = -1;
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].id === id) {
+        position = i;
+        break;
+      }
+    }
+    console.log("position: " + position);
+    list[position].value = "updated item";
+    // list = JSON.stringify(list);
+    // console.log("json list: " + list);
+    this.setState({ list });
+    console.log(list);
   };
 
   render() {
@@ -28,8 +52,20 @@ class App extends Component {
         </header>
         <main>
           <li className="item-list">
-            <Display list={this.state.list} addItem={this.addItem} />
+            <Display
+              list={this.state.list}
+              addNewItem={this.addNewItem}
+              updateItem={this.updateItem}
+              // handleEvent={this.handleEvent}
+            />
           </li>
+          {/* <input type="button" onClick={this.addNewItem} value="Add new Item" /> */}
+          <br />
+          <input
+            type="button"
+            onClick={this.updateItem}
+            value="Update existing Item"
+          />
         </main>
       </div>
     );

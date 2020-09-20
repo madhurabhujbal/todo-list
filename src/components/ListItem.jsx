@@ -1,8 +1,8 @@
 import React from "react";
 
-function ListItem({ list, listItem, addItem }) {
+function ListItem({ listItem, addNewItem, updateItem }) {
   return (
-    <div className="row" key={list.id}>
+    <div className="row" key={listItem.id}>
       <div className="col-md-1">
         <input type="checkbox" className="checkbox" />
       </div>
@@ -10,9 +10,16 @@ function ListItem({ list, listItem, addItem }) {
         <input
           type="text"
           className="item"
-          onChange={addItem}
-          value={listItem.value}
+          defaultValue={listItem.value}
+          onKeyPress={() => updateItem(listItem.id)}
           autoFocus
+        />
+      </div>
+      <div className="col-md-6">
+        <input
+          type="button"
+          onClick={() => addNewItem(listItem.id)}
+          value="Add new Item"
         />
       </div>
     </div>

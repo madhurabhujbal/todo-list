@@ -4,15 +4,15 @@ import ListItem from "./ListItem";
 
 class Display extends Component {
   render() {
-    const { list, addItem } = this.props;
+    const { list, addNewItem, updateItem } = this.props;
     return (
       <div className="container">
         {list.map((listItem) => (
           <ListItem
-            list={list}
             key={listItem.id}
             listItem={listItem}
-            addItem={addItem}
+            addNewItem={addNewItem}
+            updateItem={updateItem}
           />
         ))}
       </div>

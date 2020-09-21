@@ -5,15 +5,19 @@ import Display from "./components/Display";
 
 class App extends Component {
   state = {
-    list: [{ id: 1, value: "" }],
+    list: [
+      { id: 1, value: "" },
+      { id: 2, value: "" },
+      { id: 3, value: "" },
+    ],
   };
 
-  // handleEvent = (e) => {
-  //   if (e.key === "Enter") {
-  //     return console.log("key pressed is enter");
-  //   }
-  //   return console.log("Key pressed is not enter");
-  // };
+  handleEvent = (e, id) => {
+    console.log("pressed key: " + e.key + " on id : " + id);
+    if (e.key === "Enter") {
+      console.log("key pressed is enter");
+    }
+  };
 
   addNewItem = (id) => {
     console.log("item id: " + id);
@@ -59,7 +63,7 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
-              // handleEvent={this.handleEvent}
+              handleEvent={this.handleEvent}
             />
           </li>
           {/* <input type="button" onClick={this.addNewItem} value="Add new Item" /> */}

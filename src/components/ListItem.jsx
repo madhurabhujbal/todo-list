@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem({ listItem, addNewItem, updateItem }) {
+function ListItem({ listItem, addNewItem, updateItem, handleEvent }) {
   return (
     <div className="row" key={listItem.id}>
       <div className="col-md-1">
@@ -11,17 +11,19 @@ function ListItem({ listItem, addNewItem, updateItem }) {
           type="text"
           className="item"
           defaultValue={listItem.value}
-          onKeyPress={() => updateItem(listItem.id)}
+          onKeyPress={(e) => {
+            handleEvent(e, listItem.id);
+          }}
           autoFocus
         />
       </div>
-      <div className="col-md-6">
+      {/* <div className="col-md-6">
         <input
           type="button"
           onClick={() => addNewItem(listItem.id)}
           value="Add new Item"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

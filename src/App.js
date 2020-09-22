@@ -16,6 +16,7 @@ class App extends Component {
     console.log("pressed key: " + e.key + " on id : " + id);
     if (e.key === "Enter") {
       console.log("key pressed is enter");
+      this.addNewItem(id);
     }
   };
 

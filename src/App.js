@@ -45,8 +45,6 @@ class App extends Component {
     }
     console.log("position: " + position);
     list[position].value = "updated item";
-    // list = JSON.stringify(list);
-    // console.log("json list: " + list);
     this.setState({ list });
     console.log(list);
   };
@@ -66,7 +64,6 @@ class App extends Component {
               handleEvent={this.handleEvent}
             />
           </li>
-          {/* <input type="button" onClick={this.addNewItem} value="Add new Item" /> */}
           <br />
           <input
             type="button"

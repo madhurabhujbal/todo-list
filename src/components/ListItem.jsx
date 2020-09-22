@@ -10,16 +10,14 @@ function ListItem({ listItem, addNewItem, updateItem }) {
         <input
           type="text"
           className="item"
-          defaultValue={listItem.value}
-          onKeyPress={() => updateItem(listItem.id)}
+          value={listItem.value}
+          onKeyPress={(e) => {
+            addNewItem(e, listItem.id);
+          }}
+          onChange={(e) => {
+            updateItem(e, listItem.id);
+          }}
           autoFocus
-        />
-      </div>
-      <div className="col-md-6">
-        <input
-          type="button"
-          onClick={() => addNewItem(listItem.id)}
-          value="Add new Item"
         />
       </div>
     </div>

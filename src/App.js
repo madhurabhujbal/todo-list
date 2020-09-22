@@ -8,26 +8,28 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  // handleEvent = (e) => {
-  //   if (e.key === "Enter") {
-  //     return console.log("key pressed is enter");
-  //   }
-  //   return console.log("Key pressed is not enter");
-  // };
+  addNewItem = (e, id) => {
+    if (e.key !== "Enter") return;
 
-  addNewItem = (id) => {
     console.log("item id: " + id);
     let list = [...this.state.list];
-    let incId = list[id - 1].id + 1;
+    let incId = 1;
+    if (list.length !== 0) {
+      incId = list[list.length - 1].id + 1;
+    }
     console.log("increased id: " + incId);
-    let item = { id: incId, value: "new item" };
+    let item = { id: incId, value: "" };
     list = [...this.state.list, item];
     this.setState({ list });
+    console.log(list);
   };
 
-  updateItem = (id) => {
-    //change id'th item in the list with the newValue.
+  updateItem = (e, id) => {
     console.log("Key pressed on id:" + id);
+    if (e.key === "Enter") {
+      console.log("key pressed is enter");
+      this.addNewItem(e, id);
+    }
     let list = this.state.list;
     let position = -1;
     for (let i = 0; i < list.length; i++) {
@@ -36,10 +38,7 @@ class App extends Component {
         break;
       }
     }
-    console.log("position: " + position);
-    list[position].value = "updated item";
-    // list = JSON.stringify(list);
-    // console.log("json list: " + list);
+    list[position].value = e.target.value;
     this.setState({ list });
     console.log(list);
   };
@@ -56,16 +55,8 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
-              // handleEvent={this.handleEvent}
             />
           </li>
-          {/* <input type="button" onClick={this.addNewItem} value="Add new Item" /> */}
-          <br />
-          <input
-            type="button"
-            onClick={this.updateItem}
-            value="Update existing Item"
-          />
         </main>
       </div>
     );

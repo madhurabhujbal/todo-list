@@ -62,12 +62,6 @@ class App extends Component {
               handleEvent={this.handleEvent}
             />
           </li>
-          <br />
-          <input
-            type="button"
-            onClick={this.updateItem}
-            value="Update existing Item"
-          />
         </main>
       </div>
     );

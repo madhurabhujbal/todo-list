@@ -29,6 +29,7 @@ class App extends Component {
     let item = { id: incId, value: "" };
     list = [...this.state.list, item];
     this.setState({ list });
+    console.log(list);
   };
 
   updateItem = (e, id) => {

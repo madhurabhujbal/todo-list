@@ -8,14 +8,6 @@ class App extends Component {
     list: [{ id: 1, value: "" }],
   };
 
-  handleEvent = (e, id) => {
-    if (e.key === "Enter") {
-      console.log("key pressed is enter");
-      this.addNewItem(id);
-    }
-    this.updateItem(e, id);
-  };
-
   addNewItem = (e, id) => {
     if (e.key !== "Enter") return;
 
@@ -63,7 +55,6 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
-              handleEvent={this.handleEvent}
             />
           </li>
         </main>

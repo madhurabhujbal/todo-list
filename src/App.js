@@ -45,6 +45,9 @@ class App extends Component {
     list[position].value = e.target.value;
     this.setState({ list });
     console.log(list);
+    if (e.key === "Enter") {
+      this.addNewItem(id);
+    }
   };
 
   render() {

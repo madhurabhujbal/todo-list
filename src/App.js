@@ -9,7 +9,6 @@ class App extends Component {
   };
 
   handleEvent = (e, id) => {
-    console.log("pressed key: " + e.key + " on id : " + id);
     if (e.key === "Enter") {
       console.log("key pressed is enter");
       this.addNewItem(id);
@@ -17,7 +16,9 @@ class App extends Component {
     this.updateItem(e, id);
   };
 
-  addNewItem = (id) => {
+  addNewItem = (e, id) => {
+    if (e.key !== "Enter") return;
+
     console.log("item id: " + id);
     let list = [...this.state.list];
     let incId = 1;
@@ -41,13 +42,12 @@ class App extends Component {
         break;
       }
     }
-    console.log("position: " + position);
     list[position].value = e.target.value;
     this.setState({ list });
     console.log(list);
-    if (e.key === "Enter") {
-      this.addNewItem(id);
-    }
+    // if (e.key === "Enter") {
+    //   this.addNewItem(id);
+    // }
   };
 
   render() {

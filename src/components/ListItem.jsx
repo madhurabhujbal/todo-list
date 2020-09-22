@@ -10,7 +10,7 @@ function ListItem({ listItem, addNewItem, updateItem, handleEvent }) {
         <input
           type="text"
           className="item"
-          defaultValue={listItem.value}
+          value={listItem.value}
           onKeyPress={(e) => {
             handleEvent(e, listItem.id);
           }}

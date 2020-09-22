@@ -4,7 +4,7 @@ import ListItem from "./ListItem";
 
 class Display extends Component {
   render() {
-    const { list, addNewItem, updateItem, handleEvent } = this.props;
+    const { list, addNewItem, updateItem } = this.props;
     return (
       <div className="container">
         {list.map((listItem) => (
@@ -13,7 +13,6 @@ class Display extends Component {
             listItem={listItem}
             addNewItem={addNewItem}
             updateItem={updateItem}
-            handleEvent={handleEvent}
           />
         ))}
       </div>

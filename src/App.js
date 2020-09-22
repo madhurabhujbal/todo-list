@@ -14,6 +14,7 @@ class App extends Component {
       console.log("key pressed is enter");
       this.addNewItem(id);
     }
+    this.updateItem(e, id);
   };
 
   addNewItem = (id) => {
@@ -29,7 +30,7 @@ class App extends Component {
     this.setState({ list });
   };
 
-  updateItem = (id) => {
+  updateItem = (e, id) => {
     //change id'th item in the list with the newValue.
     console.log("Key pressed on id:" + id);
     let list = this.state.list;
@@ -41,7 +42,7 @@ class App extends Component {
       }
     }
     console.log("position: " + position);
-    list[position].value = "updated item";
+    list[position].value = e.target.value;
     this.setState({ list });
     console.log(list);
   };

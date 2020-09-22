@@ -5,11 +5,7 @@ import Display from "./components/Display";
 
 class App extends Component {
   state = {
-    list: [
-      { id: 1, value: "" },
-      { id: 2, value: "" },
-      { id: 3, value: "" },
-    ],
+    list: [{ id: 1, value: "" }],
   };
 
   handleEvent = (e, id) => {
@@ -28,7 +24,7 @@ class App extends Component {
       incId = list[list.length - 1].id + 1;
     }
     console.log("increased id: " + incId);
-    let item = { id: incId, value: "new item" };
+    let item = { id: incId, value: "" };
     list = [...this.state.list, item];
     this.setState({ list });
   };

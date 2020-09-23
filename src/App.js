@@ -44,7 +44,7 @@ class App extends Component {
   };
 
   deleteItem = () => {
-    console.log("into deleteItem function");
+    // console.log("into deleteItem function");
   };
 
   render() {

@@ -46,7 +46,10 @@ h3 {
   outline: none;
 }
 
-.col-md-1 input.checkbox {
-  margin-left: 15px;
-  outline: double;
+.col-md-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }

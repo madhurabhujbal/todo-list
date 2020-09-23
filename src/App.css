@@ -53,3 +53,15 @@ h3 {
   height: 0;
   width: 0;
 }
+
+.checkbox-new {
+  position: absolute;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+  border: 3px;
+  height: 15px;
+  width: 15px;
+  border: solid 1px black;
+  background-color: rgb(255, 255, 255);
+}

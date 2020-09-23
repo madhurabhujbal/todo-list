@@ -4,7 +4,8 @@ function ListItem({ listItem, addNewItem, updateItem, deleteItem }) {
   return (
     <div className="row" key={listItem.id}>
       <div className="col-md-1">
-        <input type="checkbox" className="checkbox" onClick={deleteItem} />
+        <input type="checkbox" onClick={deleteItem} />
+        <span className="checkbox-new"></span>
       </div>
       <div className="col-md-2">
         <input

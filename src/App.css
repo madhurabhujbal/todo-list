@@ -55,7 +55,7 @@ h3 {
   width: 0;
 }
 
-.checkbox-new {
+.checkbox-label .checkbox-new {
   position: absolute;
   margin-left: 15px;
   top: 0;
@@ -64,7 +64,8 @@ h3 {
   height: 15px;
   width: 15px;
   border: solid 1px black;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
+  border-radius: 3px;
 }
 
 .checkbox-new:hover {

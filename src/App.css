@@ -68,6 +68,11 @@ h3 {
   border-radius: 3px;
 }
 
+.checkbox-new:hover {
+  background: rgb(209, 209, 209);
+  border: solid 1.5px rgb(68, 68, 68);
+}
+
 .checkbox-label .checkbox-new::after {
   position: absolute;
   content: "";
@@ -83,7 +88,7 @@ h3 {
 }
 
 .checkbox-label input:checked ~ .checkbox-new {
-  background-color: rgb(168, 171, 192);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   transform: rotate(0deg) scale(1);
   opacity: 1;
@@ -91,11 +96,15 @@ h3 {
   box-shadow: 3px 3px rgb(175, 175, 175);
 }
 
-.checkbox-new:hover {
-  background: rgb(209, 209, 209);
-  border: solid 1.5px rgb(68, 68, 68);
+.checkbox-label input:checked ~ .checkbox-new::after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 12px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
 }
-
-/* .checkbox-new:checked {
-  color: blue;
-} */

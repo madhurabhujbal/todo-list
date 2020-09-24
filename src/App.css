@@ -66,11 +66,7 @@ h3 {
   border: solid 1px black;
   background-color: transparent;
   border-radius: 3px;
-}
-
-.checkbox-new:hover {
-  background: rgb(209, 209, 209);
-  border: solid 1.5px rgb(68, 68, 68);
+  transition: all 0.3s ease-out;
 }
 
 .checkbox-label .checkbox-new::after {
@@ -85,6 +81,7 @@ h3 {
   border-width: 0 3px 3px 0;
   transform: rotate(0deg) scale(0);
   opacity: 1;
+  transition: all 0.3s ease-out;
 }
 
 .checkbox-label input:checked ~ .checkbox-new {
@@ -107,4 +104,9 @@ h3 {
   border-width: 0 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
+}
+
+.checkbox-new:hover {
+  background: rgb(209, 209, 209);
+  border: solid 1.5px rgb(68, 68, 68);
 }

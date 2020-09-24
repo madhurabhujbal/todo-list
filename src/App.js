@@ -43,6 +43,10 @@ class App extends Component {
     console.log(list);
   };
 
+  deleteItem = () => {
+    // console.log("into deleteItem function");
+  };
+
   render() {
     return (
       <div className="App">
@@ -55,6 +59,7 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
+              deleteItem={this.deleteItem}
             />
           </li>
         </main>

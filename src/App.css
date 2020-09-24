@@ -18,6 +18,7 @@ li.item-list {
 
 .row {
   max-height: 21px;
+  max-width: 350px;
   align-items: stretch;
 }
 
@@ -46,7 +47,66 @@ h3 {
   outline: none;
 }
 
-.col-md-1 input.checkbox {
+.col-md-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-label .checkbox-new {
+  position: absolute;
   margin-left: 15px;
-  outline: double;
+  top: 0;
+  left: 0;
+  border: 3px;
+  height: 15px;
+  width: 15px;
+  border: solid 1px black;
+  background-color: transparent;
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+}
+
+.checkbox-label .checkbox-new::after {
+  position: absolute;
+  content: "";
+  left: 15px;
+  top: 15px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-new {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  border: 1px solid black;
+  box-shadow: 3px 3px rgb(175, 175, 175);
+}
+
+.checkbox-label input:checked ~ .checkbox-new::after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 12px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.checkbox-new:hover {
+  background: rgb(209, 209, 209);
+  border: solid 1.5px rgb(68, 68, 68);
 }

@@ -1,10 +1,13 @@
 import React from "react";
 
-function ListItem({ listItem, addNewItem, updateItem }) {
+function ListItem({ listItem, addNewItem, updateItem, deleteItem }) {
   return (
     <div className="row" key={listItem.id}>
       <div className="col-md-1">
-        <input type="checkbox" className="checkbox" />
+        <label className="checkbox-label">
+          <input type="checkbox" />
+          <span className="checkbox-new"></span>
+        </label>
       </div>
       <div className="col-md-2">
         <input

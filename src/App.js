@@ -10,7 +10,6 @@ class App extends Component {
 
   addNewItem = (e, id) => {
     if (e.key !== "Enter") return;
-
     console.log("item id: " + id);
     let list = [...this.state.list];
     let incId = 1;
@@ -40,11 +39,13 @@ class App extends Component {
     }
     list[position].value = e.target.value;
     this.setState({ list });
-    console.log(list);
   };
 
-  deleteItem = () => {
+  deleteItem = (id) => {
     console.log("into deleteItem function");
+    console.log("Deleted item : " + id);
+    // const list = this.state.list.filter((listItem) => listItem.id !== id);
+    // this.setState({ list });
   };
 
   render() {

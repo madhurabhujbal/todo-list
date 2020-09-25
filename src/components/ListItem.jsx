@@ -6,7 +6,7 @@ function ListItem({ listItem, addNewItem, updateItem, deleteItem }) {
       <div className="col-md-1">
         <label className="checkbox-label">
           <input type="checkbox" />
-          <span className="checkbox-new"></span>
+          <span className="checkbox-new" onClick={deleteItem}></span>
         </label>
       </div>
       <div className="col-md-2">

@@ -14,10 +14,18 @@ class Display extends Component {
             addNewItem={addNewItem}
             updateItem={updateItem}
             deleteItem={deleteItem}
+            newCheckBox={this.newCheckBox}
           />
         ))}
       </div>
     );
+  }
+
+  newCheckBox() {
+    let checked = true;
+    let checkboxClass = "checkbox-new";
+    checkboxClass += !checked ? checkboxClass : "-checked";
+    return checkboxClass;
   }
 }
 

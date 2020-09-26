@@ -95,6 +95,8 @@ h3 {
 }
 
 .checkbox-label input:checked ~ .checkbox-new::after {
+  text-decoration: line-through;
+  color: black;
   transform: rotate(45deg) scale(1);
   opacity: 1;
   left: 4px;

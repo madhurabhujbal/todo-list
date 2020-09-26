@@ -43,9 +43,9 @@ class App extends Component {
 
   deleteItem = (id) => {
     console.log("Deleted item : " + id);
-    const list = this.state.list.filter((listItem) => listItem.id !== id);
-    this.setState({ list });
-    console.log("List after deleting item : ", list);
+    // const list = this.state.list.filter((listItem) => listItem.id !== id);
+    // this.setState({ list });
+    // console.log("List after deleting item : ", list);
   };
 
   render() {

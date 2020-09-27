@@ -5,7 +5,7 @@ function ListItem({
   addNewItem,
   updateItem,
   deleteItem,
-  newCheckBox,
+  getCheckBoxClassName,
 }) {
   return (
     <div className="row" key={listItem.id}>
@@ -13,7 +13,7 @@ function ListItem({
         <label className="checkbox-label">
           <input type="checkbox" />
           <span
-            className={newCheckBox()}
+            className={getCheckBoxClassName(listItem.isChecked)}
             onClick={() => deleteItem(listItem.id)}
           ></span>
         </label>

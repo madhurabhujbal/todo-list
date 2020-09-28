@@ -21,7 +21,7 @@ function ListItem({
       <div className="col-md-2">
         <input
           type="text"
-          className="item"
+          className={getCheckBoxClassName(listItem.isChecked)}
           value={listItem.value}
           onKeyPress={(e) => {
             addNewItem(e, listItem.id);

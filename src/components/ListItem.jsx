@@ -1,21 +1,32 @@
 import React from "react";
 
-function ListItem({ listItem, addNewItem, updateItem, deleteItem }) {
+function ListItem({
+  listItem,
+  addNewItem,
+  updateItem,
+  deleteItem,
+  toggleIsChecked,
+  getCheckBoxClassName,
+}) {
   return (
     <div className="row" key={listItem.id}>
-      <div className="col-md-1">
+      <div className="col-md-1 ">
         <label className="checkbox-label">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={listItem.isChecked}
+            onChange={() => toggleIsChecked(listItem.id)}
+          />
           <span
             className="checkbox-new"
-            onClick={() => deleteItem(listItem.id)}
+            // onClick={() => deleteItem(listItem.id)}
           ></span>
         </label>
       </div>
       <div className="col-md-2">
         <input
           type="text"
-          className="item"
+          className={getCheckBoxClassName(listItem.isChecked)}
           value={listItem.value}
           onKeyPress={(e) => {
             addNewItem(e, listItem.id);

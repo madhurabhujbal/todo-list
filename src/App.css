@@ -32,7 +32,7 @@ h3 {
   padding-left: 0px;
 }
 
-.col-md-2 input.item {
+.col-md-2 input.checkbox-new {
   margin-top: 0px;
   width: 300px;
   height: 21px;
@@ -41,6 +41,19 @@ h3 {
   outline: none;
   border: none;
   background: none;
+}
+
+.col-md-2 input.checkbox-new-checked {
+  margin-top: 0px;
+  width: 300px;
+  height: 21px;
+  padding-top: 0px;
+  padding-left: 6px;
+  outline: none;
+  border: none;
+  background: none;
+  text-decoration: line-through;
+  color: black;
 }
 
 .col-md-2 input:focus {

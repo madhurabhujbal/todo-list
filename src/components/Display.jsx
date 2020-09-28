@@ -4,7 +4,13 @@ import ListItem from "./ListItem";
 
 class Display extends Component {
   render() {
-    const { list, addNewItem, updateItem, deleteItem } = this.props;
+    const {
+      list,
+      addNewItem,
+      updateItem,
+      deleteItem,
+      toggleIsChecked,
+    } = this.props;
     return (
       <div className="container">
         {list.map((listItem) => (
@@ -14,10 +20,18 @@ class Display extends Component {
             addNewItem={addNewItem}
             updateItem={updateItem}
             deleteItem={deleteItem}
+            toggleIsChecked={toggleIsChecked}
+            getCheckBoxClassName={this.getCheckBoxClassName}
           />
         ))}
       </div>
     );
+  }
+
+  getCheckBoxClassName(isChecked) {
+    let checkboxClass = "checkbox-new";
+    if (isChecked) checkboxClass += "-checked";
+    return checkboxClass;
   }
 }
 

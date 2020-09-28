@@ -5,7 +5,11 @@ import Display from "./components/Display";
 
 class App extends Component {
   state = {
-    list: [{ id: 1, value: "" }],
+    list: [
+      { id: 1, value: "milk", isChecked: true },
+      { id: 2, value: "salt", isChecked: false },
+      { id: 3, value: "sugar", isChecked: true },
+    ],
   };
 
   addNewItem = (e, id) => {
@@ -17,18 +21,13 @@ class App extends Component {
       incId = list[list.length - 1].id + 1;
     }
     console.log("increased id: " + incId);
-    let item = { id: incId, value: "" };
+    let item = { id: incId, value: "", isChecked: false };
     list = [...this.state.list, item];
     this.setState({ list });
     console.log(list);
   };
 
-  updateItem = (e, id) => {
-    console.log("Key pressed on id:" + id);
-    if (e.key === "Enter") {
-      console.log("key pressed is enter");
-      this.addNewItem(e, id);
-    }
+  getPosition(id) {
     let list = this.state.list;
     let position = -1;
     for (let i = 0; i < list.length; i++) {
@@ -37,15 +36,33 @@ class App extends Component {
         break;
       }
     }
+    return position;
+  }
+
+  updateItem = (e, id) => {
+    console.log("Key pressed on id:" + id);
+    if (e.key === "Enter") {
+      console.log("key pressed is enter");
+      this.addNewItem(e, id);
+    }
+    let list = this.state.list;
+    let position = this.getPosition(id);
     list[position].value = e.target.value;
     this.setState({ list });
   };
 
   deleteItem = (id) => {
     console.log("Deleted item : " + id);
-    const list = this.state.list.filter((listItem) => listItem.id !== id);
+    // const list = this.state.list.filter((listItem) => listItem.id !== id);
+    // this.setState({ list });
+    // console.log("List after deleting item : ", list);
+  };
+
+  toggleIsChecked = (id) => {
+    let list = this.state.list;
+    let position = this.getPosition(id);
+    list[position].isChecked = !list[position].isChecked;
     this.setState({ list });
-    console.log("List after deleting item : ", list);
   };
 
   render() {
@@ -61,6 +78,7 @@ class App extends Component {
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
               deleteItem={this.deleteItem}
+              toggleIsChecked={this.toggleIsChecked}
             />
           </li>
         </main>

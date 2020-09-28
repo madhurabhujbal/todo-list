@@ -5,17 +5,19 @@ function ListItem({
   addNewItem,
   updateItem,
   deleteItem,
+  toggleIsChecked,
   getCheckBoxClassName,
 }) {
   return (
     <div className="row" key={listItem.id}>
       <div className="col-md-1 ">
         <label className="checkbox-label">
-          <input type="checkbox" />
+          <input type="checkbox" checked={listItem.isChecked} />
           <span
             // className={getCheckBoxClassName(listItem.isChecked)}
             className="checkbox-new"
-            onClick={() => deleteItem(listItem.id)}
+            // onClick={() => deleteItem(listItem.id)}
+            onClick={() => toggleIsChecked(listItem.id)}
           ></span>
         </label>
       </div>

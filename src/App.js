@@ -52,6 +52,19 @@ class App extends Component {
     // console.log("List after deleting item : ", list);
   };
 
+  toggleIsChecked = (id) => {
+    let list = this.state.list;
+    let position = -1;
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].id === id) {
+        position = i;
+        break;
+      }
+    }
+    list[position].isChecked = !list[position].isChecked;
+    this.setState({ list });
+  };
+
   render() {
     return (
       <div className="App">
@@ -65,6 +78,7 @@ class App extends Component {
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
               deleteItem={this.deleteItem}
+              toggleIsChecked={this.toggleIsChecked}
             />
           </li>
         </main>

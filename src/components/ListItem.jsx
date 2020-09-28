@@ -13,7 +13,8 @@ function ListItem({
         <label className="checkbox-label">
           <input type="checkbox" />
           <span
-            className={getCheckBoxClassName(listItem.isChecked)}
+            // className={getCheckBoxClassName(listItem.isChecked)}
+            className="checkbox-new"
             onClick={() => deleteItem(listItem.id)}
           ></span>
         </label>

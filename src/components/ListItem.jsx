@@ -12,12 +12,14 @@ function ListItem({
     <div className="row" key={listItem.id}>
       <div className="col-md-1 ">
         <label className="checkbox-label">
-          <input type="checkbox" checked={listItem.isChecked} />
+          <input
+            type="checkbox"
+            checked={listItem.isChecked}
+            onChange={() => toggleIsChecked(listItem.id)}
+          />
           <span
-            // className={getCheckBoxClassName(listItem.isChecked)}
             className="checkbox-new"
             // onClick={() => deleteItem(listItem.id)}
-            onClick={() => toggleIsChecked(listItem.id)}
           ></span>
         </label>
       </div>

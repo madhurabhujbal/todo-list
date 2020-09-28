@@ -27,12 +27,7 @@ class App extends Component {
     console.log(list);
   };
 
-  updateItem = (e, id) => {
-    console.log("Key pressed on id:" + id);
-    if (e.key === "Enter") {
-      console.log("key pressed is enter");
-      this.addNewItem(e, id);
-    }
+  getPosition(id) {
     let list = this.state.list;
     let position = -1;
     for (let i = 0; i < list.length; i++) {
@@ -41,6 +36,17 @@ class App extends Component {
         break;
       }
     }
+    return position;
+  }
+
+  updateItem = (e, id) => {
+    console.log("Key pressed on id:" + id);
+    if (e.key === "Enter") {
+      console.log("key pressed is enter");
+      this.addNewItem(e, id);
+    }
+    let list = this.state.list;
+    let position = this.getPosition(id);
     list[position].value = e.target.value;
     this.setState({ list });
   };
@@ -54,13 +60,7 @@ class App extends Component {
 
   toggleIsChecked = (id) => {
     let list = this.state.list;
-    let position = -1;
-    for (let i = 0; i < list.length; i++) {
-      if (list[i].id === id) {
-        position = i;
-        break;
-      }
-    }
+    let position = this.getPosition(id);
     list[position].isChecked = !list[position].isChecked;
     this.setState({ list });
   };

@@ -85,6 +85,7 @@ class App extends Component {
           <br />
           <hr className="horizontal-line" />
         </main>
+        <h3>Ticked Items</h3>
       </div>
     );
   }

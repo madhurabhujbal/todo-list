@@ -83,7 +83,7 @@ class App extends Component {
           </li>
           <br />
           <br />
-          <hr />
+          <hr className="horizontal-line" />
         </main>
       </div>
     );

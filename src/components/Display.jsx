@@ -8,7 +8,7 @@ class Display extends Component {
       list,
       addNewItem,
       updateItem,
-      deleteItem,
+      tickedItem,
       toggleIsChecked,
     } = this.props;
     return (
@@ -19,7 +19,7 @@ class Display extends Component {
             listItem={listItem}
             addNewItem={addNewItem}
             updateItem={updateItem}
-            deleteItem={deleteItem}
+            tickedItem={tickedItem}
             toggleIsChecked={toggleIsChecked}
             getCheckBoxClassName={this.getCheckBoxClassName}
           />

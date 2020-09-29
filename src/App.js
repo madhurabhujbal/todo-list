@@ -81,6 +81,9 @@ class App extends Component {
               toggleIsChecked={this.toggleIsChecked}
             />
           </li>
+          <br />
+          <br />
+          <hr />
         </main>
       </div>
     );

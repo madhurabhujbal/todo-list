@@ -54,8 +54,7 @@ class App extends Component {
   tickedItem = (id) => {
     console.log("Deleted item : " + id);
     // const list = this.state.list.filter((listItem) => listItem.id !== id);
-    // console.log("list after deleted items", list);
-    //this.setState({ list });
+    // this.setState({ list });
     // console.log("List after deleting item : ", list);
   };
 
@@ -63,11 +62,7 @@ class App extends Component {
     let list = this.state.list;
     let position = this.getPosition(id);
     list[position].isChecked = !list[position].isChecked;
-    if (list[position].isChecked === true) {
-      const list = this.state.list.filter((listItem) => listItem.id !== id);
-      // this.tickedItem(id);
-      this.setState({ list });
-    }
+    this.setState({ list });
   };
 
   render() {
@@ -83,6 +78,7 @@ class App extends Component {
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
               tickedItem={this.tickedItem}
+              condition={(listItem) => !listItem.isChecked}
               toggleIsChecked={this.toggleIsChecked}
             />
           </li>
@@ -91,6 +87,14 @@ class App extends Component {
           <hr className="horizontal-line" />
         </main>
         <h3>Ticked Items</h3>
+        <Display
+          list={this.state.list}
+          addNewItem={this.addNewItem}
+          updateItem={this.updateItem}
+          tickedItem={this.tickedItem}
+          condition={(listItem) => listItem.isChecked}
+          toggleIsChecked={this.toggleIsChecked}
+        />
       </div>
     );
   }

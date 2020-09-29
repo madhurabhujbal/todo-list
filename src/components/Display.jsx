@@ -9,11 +9,12 @@ class Display extends Component {
       addNewItem,
       updateItem,
       tickedItem,
+      condition,
       toggleIsChecked,
     } = this.props;
     return (
       <div className="container">
-        {list.map((listItem) => (
+        {list.filter(condition).map((listItem) => (
           <ListItem
             key={listItem.id}
             listItem={listItem}

@@ -34,6 +34,12 @@ hr.horizontal-line {
 .col-md-2 {
   height: 21px;
   padding-left: 0px;
+  padding-right: 30px;
+  margin-right: 0px;
+}
+
+.trash-icon {
+  margin-left: 120px;
 }
 
 .col-md-2 input.checkbox-new {

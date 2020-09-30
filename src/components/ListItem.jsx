@@ -35,6 +35,9 @@ function ListItem({
           autoFocus
         />
       </div>
+      <div className="col-md-4">
+        <FontAwesomeIcon icon={faTrash} />
+      </div>
     </div>
   );
 }

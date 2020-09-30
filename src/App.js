@@ -5,11 +5,7 @@ import Display from "./components/Display";
 
 class App extends Component {
   state = {
-    list: [
-      { id: 1, value: "milk", isChecked: true },
-      { id: 2, value: "salt", isChecked: false },
-      { id: 3, value: "sugar", isChecked: true },
-    ],
+    list: [{ id: 1, value: "", isChecked: false }],
   };
 
   addNewItem = (e, id) => {
@@ -51,13 +47,6 @@ class App extends Component {
     this.setState({ list });
   };
 
-  tickedItem = (id) => {
-    console.log("Deleted item : " + id);
-    // const list = this.state.list.filter((listItem) => listItem.id !== id);
-    // this.setState({ list });
-    // console.log("List after deleting item : ", list);
-  };
-
   toggleIsChecked = (id) => {
     let list = this.state.list;
     let position = this.getPosition(id);
@@ -91,7 +80,6 @@ class App extends Component {
           list={this.state.list}
           addNewItem={this.addNewItem}
           updateItem={this.updateItem}
-          tickedItem={this.tickedItem}
           condition={(listItem) => listItem.isChecked}
           toggleIsChecked={this.toggleIsChecked}
         />

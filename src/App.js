@@ -51,13 +51,6 @@ class App extends Component {
     this.setState({ list });
   };
 
-  tickedItem = (id) => {
-    console.log("Deleted item : " + id);
-    // const list = this.state.list.filter((listItem) => listItem.id !== id);
-    // this.setState({ list });
-    // console.log("List after deleting item : ", list);
-  };
-
   toggleIsChecked = (id) => {
     let list = this.state.list;
     let position = this.getPosition(id);
@@ -91,7 +84,6 @@ class App extends Component {
           list={this.state.list}
           addNewItem={this.addNewItem}
           updateItem={this.updateItem}
-          tickedItem={this.tickedItem}
           condition={(listItem) => listItem.isChecked}
           toggleIsChecked={this.toggleIsChecked}
         />

@@ -86,7 +86,7 @@ class App extends Component {
           <br />
           <hr className="horizontal-line" />
         </main>
-        <h3>Ticked Items</h3>
+        <h3>Done List</h3>
         <Display
           list={this.state.list}
           addNewItem={this.addNewItem}

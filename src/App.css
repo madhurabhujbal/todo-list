@@ -18,7 +18,6 @@ li.item-list {
 
 .row {
   max-height: 21px;
-  max-width: 350px;
   align-items: stretch;
   margin-bottom: 8px;
 }
@@ -35,22 +34,32 @@ hr.horizontal-line {
   height: 21px;
   padding-left: 0px;
   padding-right: 30px;
-  margin-right: 0px;
+  margin-right: 10px;
+}
+
+.input-text {
+  border: none;
+  background-color: transparent;
 }
 
 .trash-icon {
-  margin-left: 120px;
+  position: absolute;
+  right: 2px;
+  margin-left: 0px;
 }
 
 .col-md-2 input.checkbox-new {
   margin-top: 0px;
-  width: 300px;
   height: 21px;
   padding-top: 0px;
   padding-left: 6px;
   outline: none;
   border: none;
   background: none;
+}
+
+.input-text {
+  width: 100%;
 }
 
 .col-md-2 input.checkbox-new-checked {

@@ -8,18 +8,19 @@ class Display extends Component {
       list,
       addNewItem,
       updateItem,
-      deleteItem,
+      tickedItem,
+      condition,
       toggleIsChecked,
     } = this.props;
     return (
       <div className="container">
-        {list.map((listItem) => (
+        {list.filter(condition).map((listItem) => (
           <ListItem
             key={listItem.id}
             listItem={listItem}
             addNewItem={addNewItem}
             updateItem={updateItem}
-            deleteItem={deleteItem}
+            tickedItem={tickedItem}
             toggleIsChecked={toggleIsChecked}
             getCheckBoxClassName={this.getCheckBoxClassName}
           />

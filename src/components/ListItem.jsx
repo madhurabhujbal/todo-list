@@ -4,7 +4,7 @@ function ListItem({
   listItem,
   addNewItem,
   updateItem,
-  deleteItem,
+  tickedItem,
   toggleIsChecked,
   getCheckBoxClassName,
 }) {

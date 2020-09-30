@@ -51,7 +51,7 @@ class App extends Component {
     this.setState({ list });
   };
 
-  deleteItem = (id) => {
+  tickedItem = (id) => {
     console.log("Deleted item : " + id);
     // const list = this.state.list.filter((listItem) => listItem.id !== id);
     // this.setState({ list });
@@ -77,11 +77,24 @@ class App extends Component {
               list={this.state.list}
               addNewItem={this.addNewItem}
               updateItem={this.updateItem}
-              deleteItem={this.deleteItem}
+              tickedItem={this.tickedItem}
+              condition={(listItem) => !listItem.isChecked}
               toggleIsChecked={this.toggleIsChecked}
             />
           </li>
+          <br />
+          <br />
+          <hr className="horizontal-line" />
         </main>
+        <h3>Done List</h3>
+        <Display
+          list={this.state.list}
+          addNewItem={this.addNewItem}
+          updateItem={this.updateItem}
+          tickedItem={this.tickedItem}
+          condition={(listItem) => listItem.isChecked}
+          toggleIsChecked={this.toggleIsChecked}
+        />
       </div>
     );
   }

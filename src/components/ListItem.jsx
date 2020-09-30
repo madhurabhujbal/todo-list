@@ -21,10 +21,10 @@ function ListItem({
           <span className="checkbox-new"></span>
         </label>
       </div>
-      <div className="col-md-2">
+      <div className="col-md-10">
         <input
           type="text"
-          className={getCheckBoxClassName(listItem.isChecked)}
+          className={(getCheckBoxClassName(listItem.isChecked), "input-text")}
           value={listItem.value}
           onKeyPress={(e) => {
             addNewItem(e, listItem.id);
@@ -35,7 +35,7 @@ function ListItem({
           autoFocus
         />
       </div>
-      <div className="col-md-2 trash-icon">
+      <div className="col-md-1 trash-icon">
         <FontAwesomeIcon icon={faTrash} />
       </div>
     </div>

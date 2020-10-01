@@ -55,8 +55,10 @@ class App extends Component {
   };
 
   removeItem = (id) => {
-    console.log("Into removeItem function");
-    console.log("Id of Item to be removed: " + id);
+    let list = this.state.list;
+    list = list.filter((listItem) => listItem.id !== id);
+    this.setState({ list });
+    console.log("final list: ", list);
   };
 
   render() {

@@ -90,6 +90,7 @@ class App extends Component {
           updateItem={this.updateItem}
           condition={(listItem) => listItem.isChecked}
           toggleIsChecked={this.toggleIsChecked}
+          removeItem={this.removeItem}
         />
       </div>
     );

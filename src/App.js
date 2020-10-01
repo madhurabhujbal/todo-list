@@ -54,6 +54,11 @@ class App extends Component {
     this.setState({ list });
   };
 
+  removeItem = (id) => {
+    console.log("Into removeItem function");
+    console.log("Id of Item to be removed: " + id);
+  };
+
   render() {
     return (
       <div className="App">
@@ -69,6 +74,7 @@ class App extends Component {
               tickedItem={this.tickedItem}
               condition={(listItem) => !listItem.isChecked}
               toggleIsChecked={this.toggleIsChecked}
+              removeItem={this.removeItem}
             />
           </li>
           <br />

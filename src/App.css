@@ -89,6 +89,12 @@ hr.horizontal-line {
 
 button {
   border: none;
+  color: rgb(119, 117, 117);
+  background: transparent;
+}
+
+button:hover {
+  color: black;
 }
 
 .col-md-1 button:focus {

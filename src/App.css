@@ -46,6 +46,14 @@ hr.horizontal-line {
   outline: none;
 }
 
+.del-btn {
+  display: none;
+}
+
+.row:hover > .del-btn {
+  display: block;
+}
+
 .col-md-2 input.checkbox-new {
   margin-top: 0px;
   height: 21px;

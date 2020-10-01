@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 
 function ListItem({
   listItem,
@@ -8,6 +8,7 @@ function ListItem({
   updateItem,
   toggleIsChecked,
   getCheckBoxClassName,
+  removeItem,
 }) {
   return (
     <div className="row" key={listItem.id}>
@@ -35,8 +36,11 @@ function ListItem({
           autoFocus
         />
       </div>
-      <div className="col-md-1 trash-icon">
-        <FontAwesomeIcon icon={faTrash} />
+      <div className="col-md-1 trash-icon del-btn">
+        <i className="far fa-trash-alt"></i>
+        <button onClick={() => removeItem(listItem.id)}>
+          <FontAwesomeIcon icon={faTrashAlt} />
+        </button>
       </div>
     </div>
   );

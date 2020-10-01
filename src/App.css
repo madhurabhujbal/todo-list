@@ -46,10 +46,12 @@ hr.horizontal-line {
   outline: none;
 }
 
-.trash-icon {
-  position: absolute;
-  right: 2px;
-  margin-left: 0px;
+.del-btn {
+  display: none;
+}
+
+.row:hover > .del-btn {
+  display: block;
 }
 
 .col-md-2 input.checkbox-new {
@@ -85,6 +87,20 @@ hr.horizontal-line {
   cursor: pointer;
   height: 0;
   width: 0;
+}
+
+button {
+  border: none;
+  color: rgb(119, 117, 117);
+  background: transparent;
+}
+
+button:hover {
+  color: black;
+}
+
+.col-md-1 button:focus {
+  outline: none;
 }
 
 .checkbox-label .checkbox-new {

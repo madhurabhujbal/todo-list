@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 function ListItem({
   listItem,
@@ -37,8 +37,9 @@ function ListItem({
         />
       </div>
       <div className="col-md-1 trash-icon del-btn">
+        <i className="far fa-trash-alt"></i>
         <button onClick={() => removeItem(listItem.id)}>
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>
     </div>

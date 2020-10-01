@@ -5,7 +5,11 @@ import Display from "./components/Display";
 
 class App extends Component {
   state = {
-    list: [{ id: 1, value: "milk", isChecked: false }],
+    list: [
+      { id: 1, value: "milk", isChecked: false },
+      { id: 2, value: "sugar", isChecked: false },
+      { id: 3, value: "jam", isChecked: false },
+    ],
   };
 
   addNewItem = (e, id) => {

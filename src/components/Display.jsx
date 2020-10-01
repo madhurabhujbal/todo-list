@@ -10,6 +10,7 @@ class Display extends Component {
       updateItem,
       condition,
       toggleIsChecked,
+      removeItem,
     } = this.props;
     return (
       <div className="container">
@@ -21,6 +22,7 @@ class Display extends Component {
             updateItem={updateItem}
             toggleIsChecked={toggleIsChecked}
             getCheckBoxClassName={this.getCheckBoxClassName}
+            removeItem={removeItem}
           />
         ))}
       </div>

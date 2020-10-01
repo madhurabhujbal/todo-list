@@ -87,6 +87,14 @@ hr.horizontal-line {
   width: 0;
 }
 
+button {
+  border: none;
+}
+
+.col-md-1 button:focus {
+  outline: none;
+}
+
 .checkbox-label .checkbox-new {
   position: absolute;
   margin-left: 15px;

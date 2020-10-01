@@ -8,6 +8,7 @@ function ListItem({
   updateItem,
   toggleIsChecked,
   getCheckBoxClassName,
+  removeItem,
 }) {
   return (
     <div className="row" key={listItem.id}>
@@ -36,7 +37,9 @@ function ListItem({
         />
       </div>
       <div className="col-md-1 trash-icon">
-        <FontAwesomeIcon icon={faTrash} />
+        <button onClick={() => removeItem(listItem.id)}>
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ function ListItem({
           autoFocus
         />
       </div>
-      <div className="col-md-1 trash-icon">
+      <div className="col-md-1 trash-icon del-btn">
         <button onClick={() => removeItem(listItem.id)}>
           <FontAwesomeIcon icon={faTrash} />
         </button>

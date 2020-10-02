@@ -25,7 +25,7 @@ function ListItem({
         <input
           type="text"
           className={
-            strikeOutListItemIfChecked(listItem.isChecked) + " input-text"
+            strikeOutListItemIfChecked(listItem.isChecked) + " listitem-text"
           }
           value={listItem.value}
           onKeyPress={(e) => {

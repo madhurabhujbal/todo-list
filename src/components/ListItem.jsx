@@ -18,7 +18,7 @@ function ListItem({
             checked={listItem.isChecked}
             onChange={() => toggleIsChecked(listItem.id)}
           />
-          <span className="checkbox-new"></span>
+          <span className="customized-checkbox"></span>
         </label>
       </div>
       <div className="col-md-10">
@@ -48,7 +48,7 @@ function ListItem({
 }
 
 function strikeOutListItemIfChecked(isChecked) {
-  let checkboxClass = "checkbox-new";
+  let checkboxClass = "customized-checkbox";
   if (isChecked) checkboxClass += "-checked";
   return checkboxClass;
 }

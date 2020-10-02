@@ -91,13 +91,6 @@ li.item-list {
   border-radius: 0;
 }
 
-/* .col-md-2 {
-  height: 21px;
-  padding-left: 0px;
-  padding-right: 30px;
-  margin-right: 10px;
-} */
-
 .col-md-10 input:focus {
   outline: none;
 }

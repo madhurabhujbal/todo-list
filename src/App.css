@@ -115,14 +115,6 @@ li.item-list {
 }
 
 .col-md-10 input.customized-checkbox-checked {
-  /* margin-top: 0px;
-  width: 300px;
-  height: 21px;
-  padding-top: 0px;
-  padding-left: 6px;
-  outline: none;
-  border: none;
-  background: none; */
   text-decoration: line-through;
   color: black;
 }

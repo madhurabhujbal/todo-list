@@ -24,7 +24,9 @@ function ListItem({
       <div className="col-md-10">
         <input
           type="text"
-          className={getCheckBoxClassName(listItem.isChecked) + " input-text"}
+          className={
+            strikeOutListItemIfChecked(listItem.isChecked) + " input-text"
+          }
           value={listItem.value}
           onKeyPress={(e) => {
             addNewItem(e, listItem.id);
@@ -45,7 +47,7 @@ function ListItem({
   );
 }
 
-function getCheckBoxClassName(isChecked) {
+function strikeOutListItemIfChecked(isChecked) {
   let checkboxClass = "checkbox-new";
   if (isChecked) checkboxClass += "-checked";
   return checkboxClass;

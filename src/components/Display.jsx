@@ -21,18 +21,11 @@ class Display extends Component {
             addNewItem={addNewItem}
             updateItem={updateItem}
             toggleIsChecked={toggleIsChecked}
-            getCheckBoxClassName={this.getCheckBoxClassName}
             removeItem={removeItem}
           />
         ))}
       </div>
     );
-  }
-
-  getCheckBoxClassName(isChecked) {
-    let checkboxClass = "checkbox-new";
-    if (isChecked) checkboxClass += "-checked";
-    return checkboxClass;
   }
 }
 

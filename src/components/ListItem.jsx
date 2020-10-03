@@ -7,7 +7,6 @@ function ListItem({
   addNewItem,
   updateItem,
   toggleIsChecked,
-  getCheckBoxClassName,
   removeItem,
 }) {
   return (
@@ -19,13 +18,15 @@ function ListItem({
             checked={listItem.isChecked}
             onChange={() => toggleIsChecked(listItem.id)}
           />
-          <span className="checkbox-new"></span>
+          <span className="customized-checkbox"></span>
         </label>
       </div>
       <div className="col-md-10">
         <input
           type="text"
-          className={(getCheckBoxClassName(listItem.isChecked), "input-text")}
+          className={
+            strikeOutListItemIfChecked(listItem.isChecked) + " listitem-text"
+          }
           value={listItem.value}
           onKeyPress={(e) => {
             addNewItem(e, listItem.id);
@@ -44,6 +45,12 @@ function ListItem({
       </div>
     </div>
   );
+}
+
+function strikeOutListItemIfChecked(isChecked) {
+  let checkboxClass = "customized-checkbox";
+  if (isChecked) checkboxClass += "-checked";
+  return checkboxClass;
 }
 
 export default ListItem;

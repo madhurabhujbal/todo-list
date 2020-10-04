@@ -72,7 +72,7 @@ class App extends Component {
           <h3>To-do List</h3>
         </header>
         <main>
-          <li className="item-list">
+          <li className="todo-list">
             <Display
               list={this.state.list}
               addNewItem={this.addNewItem}
@@ -88,14 +88,16 @@ class App extends Component {
           <hr className="horizontal-line" />
         </main>
         <h3>Done List</h3>
-        <Display
-          list={this.state.list}
-          addNewItem={this.addNewItem}
-          updateItem={this.updateItem}
-          condition={(listItem) => listItem.isChecked}
-          toggleIsChecked={this.toggleIsChecked}
-          removeItem={this.removeItem}
-        />
+        <li className="done-list">
+          <Display
+            list={this.state.list}
+            addNewItem={this.addNewItem}
+            updateItem={this.updateItem}
+            condition={(listItem) => listItem.isChecked}
+            toggleIsChecked={this.toggleIsChecked}
+            removeItem={this.removeItem}
+          />
+        </li>
       </div>
     );
   }

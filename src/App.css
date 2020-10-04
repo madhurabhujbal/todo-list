@@ -16,10 +16,6 @@ li {
   list-style: none;
 }
 
-li.todo-list {
-  animation: fade-listitem 0.3s ease-out 1s backwards;
-}
-
 .row {
   max-height: 21px;
   align-items: stretch;
@@ -99,16 +95,6 @@ li.todo-list {
   width: 100%;
   border: none;
   background-color: transparent;
-  animation: fade-listitem 0.1s ease-in-out 0.3s;
-}
-
-@keyframes fade-listitem {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .del-btn {
@@ -127,6 +113,16 @@ li.todo-list {
 .col-md-10 input.customized-checkbox-checked {
   text-decoration: line-through;
   color: black;
+  animation: fade-listitem 0.3s ease-out 0.5s backwards;
+}
+
+@keyframes fade-listitem {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 button {

@@ -113,10 +113,10 @@ li {
 .col-md-10 input.customized-checkbox-checked {
   text-decoration: line-through;
   color: black;
-  animation: fade-listitem 0.3s ease-out 0.5s backwards;
+  animation: appear-listitem 0.3s ease-out 0.5s backwards;
 }
 
-@keyframes fade-listitem {
+@keyframes appear-listitem {
   from {
     opacity: 0;
   }

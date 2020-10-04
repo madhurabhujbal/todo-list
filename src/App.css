@@ -16,8 +16,8 @@ li {
   list-style: none;
 }
 
-li.item-list {
-  padding-left: 0px;
+li.todo-list {
+  animation: fade-listitem 0.3s ease-out 1s backwards;
 }
 
 .row {
@@ -99,6 +99,16 @@ li.item-list {
   width: 100%;
   border: none;
   background-color: transparent;
+  animation: fade-listitem 0.1s ease-in-out 0.3s;
+}
+
+@keyframes fade-listitem {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .del-btn {

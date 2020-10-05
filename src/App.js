@@ -75,7 +75,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{ background: this.state.backgroundColor }}>
         <header>
           <h3>To-do List</h3>
         </header>

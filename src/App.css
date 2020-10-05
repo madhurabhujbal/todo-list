@@ -20,6 +20,7 @@ li {
   max-height: 21px;
   align-items: stretch;
   margin-bottom: 8px;
+  animation: appear-listitem 0.1s ease-in-out 0.2s backwards;
 }
 
 .col-md-1 input {
@@ -113,7 +114,7 @@ li {
 .col-md-10 input.customized-checkbox-checked {
   text-decoration: line-through;
   color: black;
-  animation: appear-listitem 0.3s ease-out 0.5s backwards;
+  /* animation: appear-listitem 0.3s ease-out 0.5s backwards; */
 }
 
 @keyframes appear-listitem {

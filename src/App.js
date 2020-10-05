@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Display from "./components/Display";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {

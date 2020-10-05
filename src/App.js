@@ -98,7 +98,7 @@ class App extends Component {
             removeItem={this.removeItem}
           />
         </li>
-        <footer>This is footer</footer>
+        <footer className="select-background">This is footer</footer>
       </div>
     );
   }

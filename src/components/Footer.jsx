@@ -1,6 +1,16 @@
 import React from "react";
-import { Component } from "react";
 
-function Footer({}) {}
+function Footer({ changeAppBackgroundColor }) {
+  return (
+    <div>
+      <button className="red" onClick={() => changeAppBackgroundColor("red")}>
+        Red
+      </button>
+      <button className="blue" onClick={() => changeAppBackgroundColor("blue")}>
+        Blue
+      </button>
+    </div>
+  );
+}
 
 export default Footer;

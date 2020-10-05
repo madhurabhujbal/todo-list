@@ -23,6 +23,15 @@ li {
   animation: appear-listitem 0.1s ease-in-out 0.2s backwards;
 }
 
+@keyframes appear-listitem {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .col-md-1 input {
   position: absolute;
   opacity: 0;
@@ -115,15 +124,6 @@ li {
   text-decoration: line-through;
   color: black;
   /* animation: appear-listitem 0.3s ease-out 0.5s backwards; */
-}
-
-@keyframes appear-listitem {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 button {

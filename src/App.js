@@ -14,11 +14,11 @@ class App extends Component {
     backgroundColor: " rgb(243, 243, 242)",
   };
 
-  // changeAppBackgroundColor = (color) => {
-  //   console.log("in changeAppBackgroundColor function");
-  //   console.log("selected color : " + color);
-  //   this.setState({ backgroundColor: color });
-  // };
+  changeAppBackgroundColor = (color) => {
+    console.log("in changeAppBackgroundColor function");
+    console.log("selected color : " + color);
+    this.setState({ backgroundColor: color });
+  };
 
   addNewItem = (e, id) => {
     if (e.key !== "Enter") return;

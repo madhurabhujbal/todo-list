@@ -11,7 +11,14 @@ class App extends Component {
       { id: 2, value: "sugar", isChecked: false },
       { id: 3, value: "jam", isChecked: false },
     ],
+    backgroundColor: " rgb(243, 243, 242)",
   };
+
+  // changeAppBackgroundColor = (color) => {
+  //   console.log("in changeAppBackgroundColor function");
+  //   console.log("selected color : " + color);
+  //   this.setState({ backgroundColor: color });
+  // };
 
   addNewItem = (e, id) => {
     if (e.key !== "Enter") return;
@@ -101,7 +108,7 @@ class App extends Component {
         </li>
         <footer className="select-background">
           Select App color :
-          <Footer />
+          <Footer changeAppBackgroundColor={this.changeAppBackgroundColor} />
         </footer>
       </div>
     );

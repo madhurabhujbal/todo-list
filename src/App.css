@@ -165,7 +165,7 @@ footer {
   margin: 3px;
   margin-bottom: 10px;
   padding: 10px;
-  background: rgb(219, 145, 145);
+  background: linear-gradient(#e66465, #9198e5);
 }
 
 .red:focus {

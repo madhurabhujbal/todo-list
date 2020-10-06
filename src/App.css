@@ -184,3 +184,15 @@ footer {
   outline: none;
   border: 3px solid black;
 }
+
+.green {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: linear-gradient(#e0f1e7, #adf7ce);
+}
+
+.green:focus {
+  outline: none;
+  border: 3px solid black;
+}

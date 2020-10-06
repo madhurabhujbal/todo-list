@@ -19,10 +19,10 @@ function ColorButtons({ changeAppBackgroundColor }) {
 
       <button
         className="green"
-        onClick={() => changeAppBackgroundColor("green")}
-      >
-        Green
-      </button>
+        onClick={() =>
+          changeAppBackgroundColor("linear-gradient(#e0f1e7, #adf7ce)")
+        }
+      ></button>
 
       <button
         className="yellow"

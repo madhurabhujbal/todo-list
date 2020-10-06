@@ -1,16 +1,15 @@
-import React from "react";
+import ColorButtons from "./ColorButtons";
+import React, { Component } from "react";
 
-function Footer({ changeAppBackgroundColor }) {
-  return (
-    <div>
-      <button className="red" onClick={() => changeAppBackgroundColor("red")}>
-        Red
-      </button>
-      <button className="blue" onClick={() => changeAppBackgroundColor("blue")}>
-        Blue
-      </button>
-    </div>
-  );
+class Footer extends Component {
+  render() {
+    const { changeAppBackgroundColor } = this.props;
+    return (
+      <div>
+        <ColorButtons changeAppBackgroundColor={changeAppBackgroundColor} />
+      </div>
+    );
+  }
 }
 
 export default Footer;

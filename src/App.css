@@ -167,3 +167,8 @@ footer {
   padding: 10px;
   background: rgb(219, 145, 145);
 }
+
+.red:focus {
+  outline: none;
+  border: 3px solid black;
+}

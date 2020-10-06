@@ -157,8 +157,13 @@ footer {
 }
 
 .color-buttons button {
-  height: 6%;
-  width: 6%;
   border: 1px solid black;
   border-radius: 80%;
+}
+
+.red {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgb(219, 145, 145);
 }

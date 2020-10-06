@@ -106,8 +106,7 @@ class App extends Component {
             removeItem={this.removeItem}
           />
         </li>
-        <footer className="select-background">
-          Select App color :
+        <footer>
           <Footer changeAppBackgroundColor={this.changeAppBackgroundColor} />
         </footer>
       </div>

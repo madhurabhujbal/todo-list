@@ -26,10 +26,10 @@ function ColorButtons({ changeAppBackgroundColor }) {
 
       <button
         className="yellow"
-        onClick={() => changeAppBackgroundColor("yellow")}
-      >
-        Yellow
-      </button>
+        onClick={() =>
+          changeAppBackgroundColor("linear-gradient(#f5f2de, #f7df78)")
+        }
+      ></button>
     </div>
   );
 }

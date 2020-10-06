@@ -155,3 +155,10 @@ footer {
 .select-background {
   padding-left: 3%;
 }
+
+.color-buttons button {
+  height: 6%;
+  width: 6%;
+  border: 1px solid black;
+  border-radius: 80%;
+}

@@ -11,7 +11,7 @@ class App extends Component {
       { id: 2, value: "sugar", isChecked: false },
       { id: 3, value: "jam", isChecked: false },
     ],
-    backgroundColor: " rgb(243, 243, 242)",
+    backgroundColor: "rgb(243, 243, 242)",
   };
 
   changeAppBackgroundColor = (color) => {
@@ -75,7 +75,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={{ background: this.state.backgroundColor }}>
+      <div
+        className="App"
+        style={{
+          background: this.state.backgroundColor,
+        }}
+      >
         <header>
           <h3>To-do List</h3>
         </header>

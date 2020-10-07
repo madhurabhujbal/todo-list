@@ -5,7 +5,6 @@
   padding: 10px;
   justify-content: center;
   text-align: center;
-  background: rgb(243, 243, 242);
 }
 
 h3 {
@@ -123,7 +122,6 @@ li {
 .col-md-10 input.customized-checkbox-checked {
   text-decoration: line-through;
   color: black;
-  /* animation: appear-listitem 0.3s ease-out 0.5s backwards; */
 }
 
 button {
@@ -142,4 +140,71 @@ button:hover {
 
 hr.horizontal-line {
   border: 1px solid rgb(88, 88, 88);
+}
+
+footer {
+  position: relative;
+  min-height: 35px;
+  margin-top: 65%;
+  margin-bottom: 4%;
+  background-color: rgb(182, 204, 243);
+  text-align: left;
+}
+
+.color-buttons button {
+  border: 1px solid black;
+  border-radius: 80%;
+}
+
+h6 {
+  padding-top: 3%;
+  margin: 8px;
+}
+
+.red {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.red:focus {
+  outline: none;
+  border: 3px solid black;
+}
+
+.blue {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: linear-gradient(#def6ff, #a5a8ce);
+}
+
+.blue:focus {
+  outline: none;
+  border: 3px solid black;
+}
+
+.green {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: linear-gradient(#e0f1e7, #adf7ce);
+}
+
+.green:focus {
+  outline: none;
+  border: 3px solid black;
+}
+
+.yellow {
+  margin: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: linear-gradient(#f5f2de, #f7df78);
+}
+
+.yellow:focus {
+  outline: none;
+  border: 3px solid black;
 }

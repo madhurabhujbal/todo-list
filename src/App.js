@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Display from "./components/Display";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -10,6 +11,13 @@ class App extends Component {
       { id: 2, value: "sugar", isChecked: false },
       { id: 3, value: "jam", isChecked: false },
     ],
+    backgroundColor: "rgb(243, 243, 242)",
+  };
+
+  changeAppBackgroundColor = (color) => {
+    console.log("in changeAppBackgroundColor function");
+    console.log("selected color : " + color);
+    this.setState({ backgroundColor: color });
   };
 
   addNewItem = (e, id) => {
@@ -67,7 +75,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div
+        className="App"
+        style={{
+          background: this.state.backgroundColor,
+        }}
+      >
         <header>
           <h3>To-do List</h3>
         </header>
@@ -98,6 +111,9 @@ class App extends Component {
             removeItem={this.removeItem}
           />
         </li>
+        <footer>
+          <Footer changeAppBackgroundColor={this.changeAppBackgroundColor} />
+        </footer>
       </div>
     );
   }

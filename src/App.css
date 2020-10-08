@@ -5,8 +5,13 @@
   padding: 10px;
   justify-content: center;
   text-align: center;
+  transition: all 4s ease-in;
 }
 
+.myclass {
+  transition: all 4s ease-in;
+  background: red;
+}
 h3 {
   padding-bottom: 15px;
 }

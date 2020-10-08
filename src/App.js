@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { CSSTransition } from "react-transition-group";
 import Display from "./components/Display";
 import Footer from "./components/Footer";
 
@@ -18,8 +17,12 @@ class App extends Component {
   changeAppBackgroundColor = (color) => {
     console.log("in changeAppBackgroundColor function");
     console.log("selected color : " + color);
-    //this.setState({ backgroundColor: color });
-    document.getElementById("AppId").classList.toggle("myclass");
+    this.setState({ backgroundColor: color });
+    // document
+    //   .getElementById("AppId")
+    //   .classList.remove(["myClass1", "myClass2", "myClass3"]);
+
+    // document.getElementById("AppId").classList.add(color);
   };
 
   addNewItem = (e, id) => {
@@ -77,12 +80,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="AppId" className="App">
-        {/* <CSSTransition
-          in={this.state.backgroundColor}
-          timeout={500}
-          classNames="background"
-        ></CSSTransition> */}
+      <div className="App" style={{ background: this.state.backgroundColor }}>
         <header>
           <h3>To-do List</h3>
         </header>

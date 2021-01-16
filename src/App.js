@@ -18,6 +18,11 @@ class App extends Component {
     console.log("in changeAppBackgroundColor function");
     console.log("selected color : " + color);
     this.setState({ backgroundColor: color });
+    // document
+    //   .getElementById("AppId")
+    //   .classList.remove(["myClass1", "myClass2", "myClass3"]);
+
+    // document.getElementById("AppId").classList.add(color);
   };
 
   addNewItem = (e, id) => {
@@ -75,12 +80,7 @@ class App extends Component {
 
   render() {
     return (
-      <div
-        className="App"
-        style={{
-          background: this.state.backgroundColor,
-        }}
-      >
+      <div className="App" style={{ background: this.state.backgroundColor }}>
         <header>
           <h3>To-do List</h3>
         </header>

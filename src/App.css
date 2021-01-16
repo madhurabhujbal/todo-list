@@ -5,7 +5,23 @@
   padding: 10px;
   justify-content: center;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
+
+/* .myClass1 {
+  background: linear-gradient(#e66465, #9198e5);
+  transition: all 0.5s ease-in-out;
+}
+
+.myClass2 {
+  background: linear-gradient(#def6ff, #a5a8ce);
+  transition: all 0.5s ease-in-out;
+}
+
+.myClass3 {
+  background: linear-gradient(#e0f1e7, #adf7ce);
+  transition: all 0.5s ease-in-out;
+} */
 
 h3 {
   padding-bottom: 15px;
